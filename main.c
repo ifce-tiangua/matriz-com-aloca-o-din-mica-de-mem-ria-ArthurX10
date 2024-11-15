@@ -32,7 +32,7 @@ int main() {
     
     for (i = 0; i < linha; i++) {
         for (j = 0; j < coluna; j++) {
-            printf("%d ", m[i][j]);
+            printf("%d   ", m[i][j]);
         }
         printf("\n");
     }
