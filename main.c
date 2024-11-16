@@ -1,43 +1,37 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include<stdio.h>
+#include<stdlib.h>
 
-int main() {
-    int linha = 0, coluna = 0;
-    int i, j;
-    int **m;
-    
-    scanf("%d", &linha);
-    scanf("%d", &coluna);
 
- 
-    m = (int **)malloc(linha * sizeof(int *));
-    if (m == NULL) {
-        printf("Erro ao alocar memória.\n");
-        return 1;
-    }
+int main(){
+  int i, j;
+  int linha, coluna;
+  int **mat;
+  
+  
+  mat = (int**)malloc(linha * sizeof(int*));
 
-    
-    for (i = 0; i < linha; i++) {
-        m[i] = (int *)malloc(coluna * sizeof(int));
-        if (m[i] == NULL) {
-            printf("Erro ao alocar memória.\n");
-            return 1;
-        }
-    }
-    for (i = 0; i < linha; i++) {
-        for (j = 0; j < coluna; j++) {
-            scanf("%d", &m[i][j]);
-        }
-    }
-    
-    for (i = 0; i < linha; i++) {
-        for (j = 0; j < coluna; j++) {
-            printf("%d   ", m[i][j]);
-        }
-        printf("\n");
-    }
+  scanf("%d", &linha);
+  scanf("%d", &coluna);
+  
+  for(i=0; i<linha;i++){
+    mat[i] = (int*)malloc(coluna*sizeof(int*));
+  }
 
-    
-    for (i = 0; i < linha; i++) {
-        free(m[i]);
+  for(i=0; i<linha; i++){
+    for(j=0; j<coluna; j++){
+      scanf("%d", &mat[i][j]);
     }
+  }
+
+  for(i=0; i<linha; i++){
+    for(j=0; j<coluna; j++){
+      printf("%d", mat[i][j]); 
+    }
+    printf("\n");
+  }
+
+  for (i = 0; i < linha; i++) {
+      free(mat[i]);
+  }
+  return 0;
+}
