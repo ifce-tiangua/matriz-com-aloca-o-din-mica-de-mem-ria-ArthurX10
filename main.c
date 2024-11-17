@@ -6,22 +6,20 @@ int main(){
   int i, j;
   int linha, coluna;
   int **mat;
-  
-  
-  mat = (int**)malloc(linha * sizeof(int*));
-   if(mat == NULL){
-     printf("matriz vazia");
-     return 1;
-   }
+
   scanf("%d", &linha);
   scanf("%d", &coluna);
+
+  if(linha == 0 || coluna == 0){
+    printf("matriz vazia\n");
+  }
+  
+  mat = (int**)malloc(linha * sizeof(int*));
+
   
   for(i=0; i<linha;i++){
    mat[i] =(int*)malloc(coluna*sizeof(int*));
-    if(mat[i]==NULL){
-      printf("matriz vazia");
-      return 1;     
-  }
+
   }
 
   for(i=0; i<linha; i++){
