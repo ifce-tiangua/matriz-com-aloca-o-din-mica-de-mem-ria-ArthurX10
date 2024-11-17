@@ -3,11 +3,11 @@
 
 void imprimir_matriz(int **mat, int linha, int coluna) {
     if (linha == 0 || coluna == 0) {
-        printf("[matriz vazia]");
+        printf("matriz vazia");
         return;
     }
 
-    printf("'");
+
     for (int i = 0; i < linha; i++) {
         for (int j = 0; j < coluna; j++) {
             printf("%d", mat[i][j]);
@@ -16,11 +16,11 @@ void imprimir_matriz(int **mat, int linha, int coluna) {
             }
         }
         if (i < linha - 1) {
-            printf(" "); // Espaço entre as linhas, sem quebra de linha aqui
+            printf(" "); 
         }
-        printf("\n"); // Quebra de linha após cada linha da matriz
+        printf("\n"); 
     }
-    printf("'");
+   
 }
 
 int main() {
