@@ -24,13 +24,22 @@ int main(){
                 scanf("%d", &mat[i][j]);
         }
         }
-
+         printf("'");
         for(i = 0; i < linha; i++){
            for(j = 0; j < coluna; j++){
-                printf("%d ", mat[i][j]);
+                printf("%d", mat[i][j]);
+                if (j < coluna - 1) {
+                printf(" ");
+            }
         }
-        printf("\n");
-        }
+        if (i < linha - 1) {
+            printf("\n");
+        } else {
+        printf("'");}
+    }
+
+
+
 
         for (i = 0; i < linha; i++) {
         free(mat[i]);
