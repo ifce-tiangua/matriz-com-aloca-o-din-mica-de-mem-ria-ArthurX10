@@ -2,17 +2,24 @@
 #include <stdlib.h>
 
 void imprimir_matriz(int **mat, int linha, int coluna) {
-        if(linha=0 || coluna =0){
-            printf("matriz vazia\n");
-            return 1;
-        }
-   
+    if (linha == 0 || coluna == 0) {
+        printf("[matriz vazia]");
+        return;
+    }
+
+    printf("'");
     for (int i = 0; i < linha; i++) {
         for (int j = 0; j < coluna; j++) {
-            printf("%d ", mat[i][j]);
+            printf("%d", mat[i][j]);
+            if (j < coluna - 1) {
+                printf(" ");
+            }
         }
-        printf("\n");
+        if (i < linha - 1) {
+            printf(" ");
+        }
     }
+    printf("'");
 }
 
 int main() {
