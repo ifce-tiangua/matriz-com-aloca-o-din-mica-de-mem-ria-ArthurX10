@@ -9,8 +9,8 @@ int main(){
   
   
   mat = (int**)malloc(linha * sizeof(int*));
-   if(mat== NULL){
-     printf("Erro ao alocar memoria");
+   if(mat == NULL){
+     printf("matriz vazia");
      return 1;
    }
   scanf("%d", &linha);
@@ -19,7 +19,7 @@ int main(){
   for(i=0; i<linha;i++){
    mat[i] =(int*)malloc(coluna*sizeof(int*));
     if(mat[i]==NULL){
-      printf("Erro ao alocar memória");
+      printf("matriz vazia");
       return 1;     
   }
   }
@@ -43,3 +43,4 @@ int main(){
 free(mat);
   return 0;
 }
+
