@@ -2,12 +2,19 @@
 #include <stdlib.h>
 
 void imprimir_matriz(int **mat, int linha, int coluna) {
+    printf("'");
     for (int i = 0; i < linha; i++) {
         for (int j = 0; j < coluna; j++) {
-            printf("%d ", mat[i][j]);
+            printf("%d", mat[i][j]);
+            if (j < coluna - 1) {
+                printf(" ");
+            }
         }
-        printf("\n");
+        if (i < linha - 1) {
+            printf("\n");
+        }
     }
+    printf("'");
 }
 
 int main() {
