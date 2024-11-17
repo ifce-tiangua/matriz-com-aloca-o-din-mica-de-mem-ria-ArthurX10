@@ -4,7 +4,7 @@
 void imprimir_matriz(int **mat, int linha, int coluna) {
         if(linha=0 || coluna =0){
             printf("matriz vazia\n");
-            return 0;
+            return 1;
         }
    
     for (int i = 0; i < linha; i++) {
