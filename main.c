@@ -16,8 +16,9 @@ void imprimir_matriz(int **mat, int linha, int coluna) {
             }
         }
         if (i < linha - 1) {
-            printf(" ");
+            printf(" "); // Espaço entre as linhas, sem quebra de linha aqui
         }
+        printf("\n"); // Quebra de linha após cada linha da matriz
     }
     printf("'");
 }
@@ -27,6 +28,11 @@ int main() {
     int **mat;
 
     scanf("%d %d", &linha, &coluna);
+
+    if (linha == 0 || coluna == 0) {
+        printf("[matriz vazia]");
+        return 0;
+    }
 
     mat = (int**)malloc(linha * sizeof(int*));
     if (mat == NULL) return 1;
