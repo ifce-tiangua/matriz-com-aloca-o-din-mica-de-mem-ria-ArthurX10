@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define LINHA 20
+#define COLUNA 20
+
 int main() {
-    int linha, coluna, **mat, i, j;
+    int linha = LINHA, coluna = COLUNA, **mat, i, j;
 
 
     scanf("%d %d", &linha, &coluna);
@@ -35,7 +38,9 @@ int main() {
                 printf(" ");
             }
         }
-        printf("\n");
+        if (i < linha - 1) {
+            printf("\n");
+        }
     }
 
 
