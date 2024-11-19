@@ -13,9 +13,9 @@ int main() {
     }
 
     
-    mat = (int**)calloc(linha, sizeof(int*));  
+    mat = (int**)malloc(linha* sizeof(int*));  
     for (i = 0; i < linha; i++) {
-        mat[i] = (int*)calloc(coluna, sizeof(int)); 
+        mat[i] = (int*)malloc(coluna* sizeof(int)); 
     }
 
     
